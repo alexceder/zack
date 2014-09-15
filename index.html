@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Zack by layback</title>
+    <style>
+        html {
+            color: #997292;
+            text-align: center;
+            font-family: "Open Sans", helvetica, sans-serif;
+            margin: 0;
+            background: url('assets/bg-site.png') #281E28; }
+        canvas {
+            margin: 50px auto 50px auto;
+            box-shadow: 0 0 200px black; }
+    </style>
+</head>
+<body>
+
+<div id="zack" title="Use your keyboard"></div>
+
+<p>Make sure to have 60 fps for best experience.</p>
+
+<!-- FRAMEWORK -->
+<script src="js/phaser.min.js"></script>
+
+<!-- OBJECTS -->
+<script src="js/player.js"></script>
+<script src="js/movingPlatform.js"></script>
+<script src="js/fallingPlatform.js"></script>
+<script src="js/ghost.js"></script>
+<script src="js/laser.js"></script>
+<script src="js/door.js"></script>
+<script src="js/pickup.js"></script>
+<script src="js/boss-11.js"></script>
+
+<!-- STATES -->
+<script src="js/level.js"></script>
+<script src="js/level-levels.js"></script>
+<script src="js/level-00.js"></script>
+<script src="js/level-01.js"></script>
+<script src="js/level-02.js"></script>
+<script src="js/level-03.js"></script>
+<script src="js/level-04.js"></script>
+<script src="js/level-05.js"></script>
+<script src="js/level-06.js"></script>
+<script src="js/level-11.js"></script>
+<script src="js/level-12.js"></script>
+<script src="js/level-13.js"></script>
+<script src="js/level-14.js"></script>
+<script src="js/zack.js"></script>
+
+<!-- GAME -->
+<script>
+(function() {
+'use strict';
+
+var game = new Phaser.Game(1024, 600, Phaser.AUTO, 'zack');
+game.state.add('level-levels', Level_levels);
+game.state.add('level-00', Level_00);
+game.state.add('level-01', Level_01);
+game.state.add('level-02', Level_02);
+game.state.add('level-03', Level_03);
+game.state.add('level-04', Level_04);
+game.state.add('level-05', Level_05);
+game.state.add('level-06', Level_06);
+game.state.add('level-11', Level_11);
+game.state.add('level-12', Level_12);
+game.state.add('level-13', Level_13);
+game.state.add('level-14', Level_14);
+game.state.add('zack', Zack, true);
+})();
+</script>
+
+</body>
+</html>
